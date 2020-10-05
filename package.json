@@ -1,7 +1,7 @@
 {
   "name": "gh-packages",
   "version": "0.0.3",
-  "description": "Like `gh-pages` but for packages!",
+  "description": "Like gh-pages but for packages!",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,8 +10,12 @@
     "type": "git",
     "url": "git+https://github.com/RilDev/gh-packages.git"
   },
-  "author": "",
-  "license": "ISC",
+  "keywords": ["git", "gh-packages", "github"],
+  "author": {
+    "name": "RilDev",
+    "url": "https://rildev.website/"
+  },
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/RilDev/gh-packages/issues"
   },
