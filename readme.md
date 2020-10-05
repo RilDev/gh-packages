@@ -14,3 +14,4 @@ Thanks to the people working on the [yargs](https://github.com/yargs/yargs) proj
 
 - [ ] Finish the `readme.md`
 - [ ] add test to know it `git init` has been run in the directory
+- [ ] add user custom command option
