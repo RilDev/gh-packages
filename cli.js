@@ -35,24 +35,25 @@ if (!shell.which('git')) {
   shell.echo('Sorry, this script requires git');
   shell.exit(1);
 }
+// test if `git init` has been run
 
 //main
 //update version number
 shell.exec(`npm version --no-git-tag-version ${updateType}`);
 //git add package.json with new package version number
-// git add package.json
+shell.exec(`git add package.json`);
 //git commit mesasge update version number
-// && git commit -m \"update version number\"
+shell.exec(`git commit -m \"update version number\"`);
 //push updated package.json
-// && git push
+shell.exec(`git push`);
 //switch to gh-packages branch, create it if it does not exist
-// git switch -C gh-packages
+shell.exec(`git switch -C gh-packages`);
 //run user command
 //commit user modifications
-// && git add -A && git commit -m \"ready to publish\"
+shell.exec(`git add -A && git commit -m \"ready to publish\"`);
 //push package to gh-packages branch
-// && git push -f origin package
+shell.exec(`git push -f origin gh-packages`);
 //publish package
-// && npm publish
+shell.exec(`npm publish`);
 //switch back to previous branch
-// git switch -
+shell.exec(`git switch -`);
