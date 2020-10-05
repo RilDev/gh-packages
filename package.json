@@ -1,6 +1,6 @@
 {
   "name": "gh-packages",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Like gh-pages but for packages!",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,11 @@
     "type": "git",
     "url": "git+https://github.com/RilDev/gh-packages.git"
   },
-  "keywords": ["git", "gh-packages", "github"],
+  "keywords": [
+    "git",
+    "gh-packages",
+    "github"
+  ],
   "author": {
     "name": "RilDev",
     "url": "https://rildev.website/"
