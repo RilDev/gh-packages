@@ -2,8 +2,6 @@
 //import utils
 const shell = require('shelljs');
 const { argv } = require('yargs');
-// prettier-ignore
-console.log('crlntn -- cli.js argv',argv._[0])
 
 //get args
 //update: patch, minor or major
