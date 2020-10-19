@@ -30,7 +30,7 @@ In order to always have the latest version, you can run `gh-pages` with `npx`. I
 npx gh-packages
 ```
 
-If you choose to do it this way, remember to always add `npx` in front of every `gh-packages` commandes.
+If you choose to do it this way, remember to always add `npx` in front of every `gh-packages` commends.
 
 ## Usage
 
@@ -95,9 +95,9 @@ With `gh-packages` you can choose how the version number will be updated: patch,
 
 You can read about semantic versioning here: [semver.org](https://semver.org/)
 
-__Patch Update:__ A patch is used to indicate a small change like a bug fix or an improvement to the documentation. For instance, asuming the current version is `0.0.3`, if I update the `readme.md` file, I will do a patch update. The new version would be `0.0.4`.
+__Patch Update:__ A patch is used to indicate a small change like a bug fix or an improvement to the documentation. For instance, assuming the current version is `0.0.3`, if I update the `readme.md` file, I will do a patch update. The new version would be `0.0.4`.
 
-By default, `gh-packages` will perform a pacth update.
+By default, `gh-packages` will perform a patch update.
 
 ```
 gh-packages
@@ -208,7 +208,7 @@ __Publishing on GitHub:__
 
 If you want to publish your package to NPM, you don't have anything to do.
 
-[GitHub aquired NPM in 2020](https://github.blog/2020-04-15-npm-has-joined-github/). So if you want, you can publish your package on Github instead of NPM. I would __not__ recommand you to do so because I had issues with it. When I tried to publish my package on Github, it ended-up not showing on my NPM account and not being searchable on [npmjs.com](npmjs.com). However, it is downloadable via `npm i package-name`. If you've had more success than me with this, please open an issue to let me know.
+[GitHub acquired NPM in 2020](https://github.blog/2020-04-15-npm-has-joined-github/). So if you want, you can publish your package on Github instead of NPM. I would __not__ recommend you to do so because I had issues with it. When I tried to publish my package on Github, it ended-up not showing on my NPM account and not being searchable on [npmjs.com](npmjs.com). However, it is downloadable via `npm i package-name`. If you've had more success than me with this, please open an issue to let me know.
 
 For more information please head to the [Official GitHub Documentation: Configuring npm for use with GitHub Packages](https://docs.github.com/en/free-pro-team@latest/packages/using-github-packages-with-your-projects-ecosystem/configuring-npm-for-use-with-github-packages)
 
