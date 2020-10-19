@@ -9,7 +9,8 @@ Publish your packages to NPM with one command.
 - [Installation](#installation)
 - [Usage](#usage)
 - [Options](#options)
-    - [Version Number Update](#version-number-update%3A)
+  - [Version Number Update](#version-number-update%3A)
+  - [User Command](#user-command%3A)
 - [Thanks](#thanks)
 - [Todo](#todo)
 
@@ -81,7 +82,7 @@ _Note: If you don't have an NPM account yet, you can create one here: [create NP
 ### Options
 
 ```
-gh-packages [patch|minor|major]
+gh-packages [patch|minor|major] [-c|--command]
 ```
 
 #### Version Number Update:
@@ -116,6 +117,16 @@ __Major Update:__ A major update is a new functionality that will break existing
 gh-packages major
 ```
 
+#### User Command:
+
+It is possible to define a `bash` command by using the `--command` or `-c` flag that will be executed on the `packages` branch.
+
+```
+gh-packages -c 'rm -r docs && mv styles.css styles.min.css'
+```
+
+This functionality makes it a breeze to `rename` files and to `delete` unnecessary code. Making the package bundle smaller.
+
 ## Thanks
 
 Thanks to [Rubens Mariuzzo](https://medium.com/@rmariuzzo) for his [Guide to creating a NodeJS command-line package](https://medium.com/netscape/a-guide-to-create-a-nodejs-command-line-package-c2166ad0452e).
@@ -128,7 +139,7 @@ Thanks to the people working on the [yargs](https://github.com/yargs/yargs) proj
 
 - [x] Finish the `readme.md`
 - [ ] add test to know if `git init` has been run in the directory
-- [ ] add user custom command option `-c` or `--command`
+- [x] add user custom command option `-c` or `--command`
 - [x] add tags in GitHub repo
 - [ ] add `--help` and `-h` option
 - [ ] add package.json implementation example `"package": "gh-packages"`

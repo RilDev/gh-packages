@@ -30,11 +30,20 @@ if (!updateType) {
   shell.exit(1);
 }
 
+//command: what will be executed on the new branch, before package publication
+// if -c or --command flags are used, put them in the `userCommand` variable
+let userCommand = null;
+
+if (argv.c || argv.command) {
+  userCommand = argv.c || argv.command;
+}
+
 //test for missing dependencies
 if (!shell.which('git')) {
   shell.echo('Sorry, this script requires git');
   shell.exit(1);
 }
+
 // test if `git init` has been run
 
 //main
@@ -49,6 +58,9 @@ shell.exec(`git push`);
 //switch to gh-packages branch, create it if it does not exist
 shell.exec(`git switch -C gh-packages`);
 //run user command
+if (userCommand) {
+  shell.exec(userCommand)
+}
 //commit user modifications
 shell.exec(`git add -A && git commit -m \"ready to publish\"`);
 //push package to gh-packages branch
