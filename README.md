@@ -11,6 +11,10 @@ Publish your packages to NPM with one command.
 - [Options](#options)
   - [Version Number Update](#version-number-update)
   - [User Command](#user-command)
+- [Package.JSON Configuration](#package-json-configuration)
+  - [Basic Configuration](#basic-configuration)
+  - [Intermediate Configuration](#intermediate-configuration)
+  - [Advanced Configuration](#advanced-configuration)
 - [Thanks](#thanks)
 - [Todo](#todo)
 
@@ -119,13 +123,94 @@ gh-packages major
 
 #### User Command:
 
-It is possible to define a `bash` command by using the `--command` or `-c` flag that will be executed on the `packages` branch.
+It is possible to define a `bash` command by using the `--command` or `-c` flag that will be executed on the `gh-packages` branch.
 
 ```
 gh-packages -c 'rm -r docs && mv styles.css styles.min.css'
 ```
 
 This functionality makes it a breeze to `rename` files and to `delete` unnecessary code. Making the package bundle smaller.
+
+### Package.JSON Configuration
+
+After you are done experimenting with the command line, it is good to parameter permanently your options in the `package.json` file.
+
+#### Basic Configuration
+
+You can add a new script to the `package.json` file this way:
+
+```
+"scripts": {
+  ...,
+  "package": "gh-packages"
+}
+```
+
+__Note:__ Don't forget to add a comma `,` at the end of the previous line. It is a common cause of error when editing `package.json` files.
+
+You can now run the command `npm run package` to publish a `patch` of your package.
+
+#### Intermediate Configuration
+
+As you will need more control over your command, namely to specify the update type and add a custom command, you can add this line to the `scripts` in your `package.json` file.
+
+```
+"scripts": {
+  ...,
+  "package": "gh-packages ${VERSION-patch} --command \"echo 'custom command'\""
+}
+```
+
+You can run the command in two ways: with or without variables.
+
+```
+npm run package
+```
+
+This will publish your package on NPM with as a `patch` update.
+
+__Note:__ The `--command` argument will be executed on the `gh-packages` auto-generated branch before being pushed on your repository and published on NPM.
+
+```
+VERSION=major npm run package
+```
+
+This command, on top of running you custom command will publish you package to NPM as a `major` update. You can swap the word `major` with `minor` or `patch` as needed.
+
+You can also change the `${VERSION-patch}` to `${VERSION-minor}` to change the default package publication from `patch` to `minor`.
+
+#### Advanced Configuration
+
+In this section, we will be looking at the package name itself and how to publish your package directly on GitHub.
+
+__Package Name:__
+
+The `name` in your `package.json` will determine your package's name. You have to options here: use a simple name that hasn't been taken by another project. Or put it under an account name such as `@username/your-package-name`.
+
+```
+"name": "your-package-name",
+```
+
+This will set your package name to `your-package-name`. 
+
+After it is published, your package will be downloadable with `npm install your-package-name`.
+
+```
+"name": "@username/your-package-name",
+```
+In case the name you chose has already been taken or is too close to another package name (yes, you will be blocked from even publishing it), you can publish it under a GitHub account name.
+
+It can also be good for organizations that would like to keep there packages tidy all in one place.
+
+After it is published, your package will be available with `npm install @username/your-package-name`.
+
+__Publishing on GitHub:__
+
+If you want to publish your package to NPM, you don't have anything to do.
+
+[GitHub aquired NPM in 2020](https://github.blog/2020-04-15-npm-has-joined-github/). So if you want, you can publish your package on Github instead of NPM. I would __not__ recommand you to do so because I had issues with it. When I tried to publish my package on Github, it ended-up not showing on my NPM account and not being searchable on [npmjs.com](npmjs.com). However, it is downloadable via `npm i package-name`. If you've had more success than me with this, please open an issue to let me know.
+
+For more information please head to the [Official GitHub Documentation: Configuring npm for use with GitHub Packages](https://docs.github.com/en/free-pro-team@latest/packages/using-github-packages-with-your-projects-ecosystem/configuring-npm-for-use-with-github-packages)
 
 ## Thanks
 
@@ -142,5 +227,5 @@ Thanks to the people working on the [yargs](https://github.com/yargs/yargs) proj
 - [x] add user custom command option `-c` or `--command`
 - [x] add tags in GitHub repo
 - [ ] add `--help` and `-h` option
-- [ ] add package.json implementation example `"package": "gh-packages"`
-- [ ] add `VERSION=major COMMAND="mv cli.js index.js && rm .gitignore" npm package` example
+- [x] add package.json implementation example `"package": "gh-packages"`
+- [x] add `VERSION=major COMMAND="mv cli.js index.js && rm .gitignore" npm package` example
