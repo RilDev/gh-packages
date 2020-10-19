@@ -9,8 +9,8 @@ Publish your packages to NPM with one command.
 - [Installation](#installation)
 - [Usage](#usage)
 - [Options](#options)
-  - [Version Number Update](#version-number-update%3A)
-  - [User Command](#user-command%3A)
+  - [Version Number Update](#version-number-update)
+  - [User Command](#user-command)
 - [Thanks](#thanks)
 - [Todo](#todo)
 
