@@ -222,10 +222,18 @@ Thanks to the people working on the [yargs](https://github.com/yargs/yargs) proj
 
 ## Todo
 
-- [x] Finish the `readme.md`
 - [ ] add test to know if `git init` has been run in the directory
 - [x] add user custom command option `-c` or `--command`
-- [x] add tags in GitHub repo
 - [ ] add `--help` and `-h` option
 - [x] add package.json implementation example `"package": "gh-packages"`
-- [x] add `VERSION=major COMMAND="mv cli.js index.js && rm .gitignore" npm package` example
+- [x] add `VERSION=major ~~COMMAND="mv cli.js index.js && rm .gitignore"~~ npm run package` example
+- [ ] add `--platform` and `-p` option to choose to publish on NPM or on GitHub
+- [ ] publish to other platforms as well. ex: docker, maven, nuget, rubygems, pypi...
+- [ ] name branches differently in case user wants to upload his package on multiple platforms. ex: gh-packages-npm, gh-packages-pypi...
+- [ ] check how does NPM parse/updates files
+- [ ] add info message on top of README.md to ask for feedback/feature request
+- [ ] add docsify documentation
+- [ ] add docsify to thanks section
+- [ ] test code. get at least 80% code coverage.
+- [ ] comment code well
+- [ ] refactor code
