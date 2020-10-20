@@ -11,10 +11,11 @@ Publish your packages to NPM with one command.
 - [Options](#options)
   - [Version Number Update](#version-number-update)
   - [User Command](#user-command)
-- [Package.JSON Configuration](#package-json-configuration)
+- [Package.JSON Configuration](#packagejson-configuration)
   - [Basic Configuration](#basic-configuration)
   - [Intermediate Configuration](#intermediate-configuration)
   - [Advanced Configuration](#advanced-configuration)
+- [Feature Request & Improvement](#feature-request-improvement)
 - [Thanks](#thanks)
 - [Todo](#todo)
 
@@ -211,6 +212,12 @@ If you want to publish your package to NPM, you don't have anything to do.
 [GitHub acquired NPM in 2020](https://github.blog/2020-04-15-npm-has-joined-github/). So if you want, you can publish your package on Github instead of NPM. I would __not__ recommend you to do so because I had issues with it. When I tried to publish my package on Github, it ended-up not showing on my NPM account and not being searchable on [npmjs.com](npmjs.com). However, it is downloadable via `npm i package-name`. If you've had more success than me with this, please open an issue to let me know.
 
 For more information please head to the [Official GitHub Documentation: Configuring npm for use with GitHub Packages](https://docs.github.com/en/free-pro-team@latest/packages/using-github-packages-with-your-projects-ecosystem/configuring-npm-for-use-with-github-packages)
+
+## Feature Request & Improvement
+
+Would you like a new feature? [Open an issue here!](https://github.com/RilDev/gh-packages/issues)
+
+Found a typo or would like to improve the docs? [Open a PR here!](https://github.com/RilDev/gh-packages/pulls)
 
 ## Thanks
 
