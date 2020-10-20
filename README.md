@@ -15,7 +15,7 @@ Publish your packages to NPM with one command.
   - [Basic Configuration](#basic-configuration)
   - [Intermediate Configuration](#intermediate-configuration)
   - [Advanced Configuration](#advanced-configuration)
-- [Feature Request & Improvement](#feature-request-improvement)
+- [Feature Request & Improvement](#feature-request--improvement)
 - [Thanks](#thanks)
 - [Todo](#todo)
 
