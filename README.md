@@ -229,7 +229,7 @@ Thanks to the people working on the [yargs](https://github.com/yargs/yargs) proj
 
 ## Todo
 
-- [ ] add test to know if `git init` has been run in the directory
+- [x] add test to know if `git init` has been run in the directory
 - [x] add user custom command option `-c` or `--command`
 - [ ] add `--help` and `-h` option
 - [x] add package.json implementation example `"package": "gh-packages"`

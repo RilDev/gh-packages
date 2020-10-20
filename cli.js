@@ -45,6 +45,10 @@ if (!shell.which('git')) {
 }
 
 // test if `git init` has been run
+if (!shell.test('-d', '.git')) {
+  shell.echo('Please first run the command `git init` in this directory')
+  shell.exit(1);
+}
 
 //main
 //update version number
