@@ -3,7 +3,7 @@
 /*  Gh-Packages
  *  Like `gh-pages` but for packages!
  *  Thank you for checking out the source code!
- *  For the code to eternal life, please check: https://codeforfaith.com
+ *  For the code to eternal life, please visit: https://codeforfaith.com
  *
  *  IMPORTS: import dependencies and modules
  *  ENVIRONEMENT CHECKS: check if the project can run Gh-Packages successfully
@@ -31,6 +31,7 @@ if (!shell.test("-d", ".git")) {
 
 // INITIALIZATION
 // init argv: argv is going to store all the user's input
+// the following block creates argv and initializes the `--help` flag
 // input that isn't using an option will be stored in argv._ as an array
 const argv = yargs
   .usage("gh-packages [patch|minor|major] [-c|--command]")
@@ -52,7 +53,7 @@ const argv = yargs
     "This will publish your package with a miror bump and print out 'custom command' in the terminal"
   ).argv;
 
-// get args
+// get user's arguments
 // update: patch, minor or major
 const validUpdateTypes = ["patch", "minor", "major"];
 // if no argument given by user, default to 'patch'
@@ -67,7 +68,7 @@ if (!validUpdateTypes.includes(updateType)) {
   shell.exit(1);
 }
 
-//command: what will be executed on the new branch, before package publication
+// command: what will be executed on the new branch, before package publication
 // if -c or --command flags are used, put them in the `userCommand` variable
 let userCommand = null;
 
@@ -76,26 +77,25 @@ if (argv.c || argv.command) {
 }
 
 // EXECUTION
-
-//update version number
+// update version number
 shell.exec(`npm version --no-git-tag-version ${updateType}`);
-//git add package.json with new package version number
+// git add package.json with new package version number
 shell.exec(`git add package.json`);
-//git commit mesasge update version number
+// git commit mesasge update version number
 shell.exec(`git commit -m \"update version number\"`);
-// //push updated package.json
+// // push updated package.json
 // shell.exec(`git push`);
-//switch to gh-packages branch, create it if it does not exist
+// switch to gh-packages branch, create it if it does not exist
 shell.exec(`git switch -C gh-packages`);
-//run user command
+// run user command
 if (userCommand) {
   shell.exec(userCommand);
 }
-//commit user modifications
+// commit user modifications
 shell.exec(`git add -A && git commit -m \"ready to publish\"`);
-//push package to gh-packages branch
+// push package to gh-packages branch
 shell.exec(`git push -f origin gh-packages`);
-//publish package
+// publish package
 shell.exec(`npm publish`);
-//switch back to previous branch
+// switch back to previous branch
 shell.exec(`git switch -`);
