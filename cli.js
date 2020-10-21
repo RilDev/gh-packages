@@ -43,7 +43,10 @@ const argv = yargs
         'Custom user Bash command\nExample: gh-packages -c "rm -r docs"',
     },
   })
-  .example("gh-packages", "This will publish your package with a patch version bump")
+  .example(
+    "gh-packages",
+    "This will publish your package with a patch version bump"
+  )
   .example(
     `gh-packages minor -c "echo 'custom command'"`,
     "This will publish your package with a miror bump and print out 'custom command' in the terminal"
@@ -51,7 +54,7 @@ const argv = yargs
 
 // get args
 // update: patch, minor or major
-const validUpdateTypes = ['patch', 'minor', 'major'];
+const validUpdateTypes = ["patch", "minor", "major"];
 // if no argument given by user, default to 'patch'
 let updateType = argv._[0] || validUpdateTypes[0];
 
@@ -72,26 +75,27 @@ if (argv.c || argv.command) {
   userCommand = argv.c || argv.command;
 }
 
-// //main
-// //update version number
-// shell.exec(`npm version --no-git-tag-version ${updateType}`);
-// //git add package.json with new package version number
-// shell.exec(`git add package.json`);
-// //git commit mesasge update version number
-// shell.exec(`git commit -m \"update version number\"`);
+// EXECUTION
+
+//update version number
+shell.exec(`npm version --no-git-tag-version ${updateType}`);
+//git add package.json with new package version number
+shell.exec(`git add package.json`);
+//git commit mesasge update version number
+shell.exec(`git commit -m \"update version number\"`);
 // //push updated package.json
 // shell.exec(`git push`);
-// //switch to gh-packages branch, create it if it does not exist
-// shell.exec(`git switch -C gh-packages`);
-// //run user command
-// if (userCommand) {
-//   shell.exec(userCommand)
-// }
-// //commit user modifications
-// shell.exec(`git add -A && git commit -m \"ready to publish\"`);
-// //push package to gh-packages branch
-// shell.exec(`git push -f origin gh-packages`);
-// //publish package
-// shell.exec(`npm publish`);
-// //switch back to previous branch
-// shell.exec(`git switch -`);
+//switch to gh-packages branch, create it if it does not exist
+shell.exec(`git switch -C gh-packages`);
+//run user command
+if (userCommand) {
+  shell.exec(userCommand);
+}
+//commit user modifications
+shell.exec(`git add -A && git commit -m \"ready to publish\"`);
+//push package to gh-packages branch
+shell.exec(`git push -f origin gh-packages`);
+//publish package
+shell.exec(`npm publish`);
+//switch back to previous branch
+shell.exec(`git switch -`);
