@@ -49,26 +49,14 @@ const argv = yargs
     "This will publish your package with a miror bump and print out 'custom command' in the terminal"
   ).argv;
 
-//get args
-//update: patch, minor or major
-let updateType = null;
-switch (argv._[0]) {
-  case undefined:
-  case "patch":
-    updateType = "patch";
-    break;
-  case "minor":
-    updateType = "minor";
-    break;
-  case "major":
-    updateType = "major";
-    break;
-  default:
-    updateType = null;
-}
+// get args
+// update: patch, minor or major
+const validUpdateTypes = ['patch', 'minor', 'major'];
+// if no argument given by user, default to 'patch'
+let updateType = argv._[0] || validUpdateTypes[0];
 
-//test for error in updateType input
-if (!updateType) {
+// if user given updateType not in validUpdateTypes, display error and exit
+if (!validUpdateTypes.includes(updateType)) {
   shell.echo(
     " Update package accepted values: patch, minor, major.\n",
     "If blank, defaults to patch."
