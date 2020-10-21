@@ -229,11 +229,7 @@ Thanks to the people working on the [yargs](https://github.com/yargs/yargs) proj
 
 ## Todo
 
-- [x] add test to know if `git init` has been run in the directory
-- [x] add user custom command option `-c` or `--command`
 - [ ] add `--help` and `-h` option
-- [x] add package.json implementation example `"package": "gh-packages"`
-- [x] add `VERSION=major ~~COMMAND="mv cli.js index.js && rm .gitignore"~~ npm run package` example
 - [ ] add `--platform` and `-p` option to choose to publish on NPM or on GitHub
 - [ ] publish to other platforms as well. ex: docker, maven, nuget, rubygems, pypi...
 - [ ] name branches differently in case user wants to upload his package on multiple platforms. ex: gh-packages-npm, gh-packages-pypi...
@@ -244,3 +240,7 @@ Thanks to the people working on the [yargs](https://github.com/yargs/yargs) proj
 - [ ] test code. get at least 80% code coverage.
 - [ ] comment code well
 - [ ] refactor code
+- [ ] remove automatic push of `package.json` on master
+- [ ] do one-line commit in `package.json` of the `"version"` line, complete with version number
+- [ ] refactor `README` to make it a 30 second read
+- [ ] create a wiki to explain all aspects of the project
