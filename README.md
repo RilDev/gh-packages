@@ -244,3 +244,4 @@ Thanks to the people working on the [yargs](https://github.com/yargs/yargs) proj
 - [ ] do one-line commit in `package.json` of the `"version"` line, complete with version number
 - [ ] refactor `README` to make it a 30 second read
 - [ ] create a wiki to explain all aspects of the project
+- [ ] when pass invalide version bump, exit(1)
