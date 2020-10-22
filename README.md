@@ -121,6 +121,7 @@ Thanks to the people working on the [yargs](https://github.com/yargs/yargs) proj
 - [x] add info message on top of README.md to ask for feedback/feature request
 - [x] refactor `README` to make it a 30 second read
 - [ ] create a wiki to explain all aspects of the project
+- [ ] add example page to wiki (mv, rm, rm -r, rm all but specified files...)
 - [ ] test code. get at least 80% code coverage.
 - [x] comment code well
 - [x] refactor code
@@ -131,3 +132,6 @@ Thanks to the people working on the [yargs](https://github.com/yargs/yargs) proj
 - [ ] publish to other platforms as well. ex: docker, maven, nuget, rubygems, pypi...
 - [ ] name branches differently in case user wants to upload his package on multiple platforms. ex: gh-packages-npm, gh-packages-pypi...
 - [ ] check how does NPM parse/updates files
+- [ ] convert project to TypeScript
+- [ ] add Rollup bundeler
+- [ ] run `gh-packages` to reduce bundel size
