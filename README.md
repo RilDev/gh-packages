@@ -119,6 +119,8 @@ Thanks to the people working on the [yargs](https://github.com/yargs/yargs) proj
 
 - [ ] create a wiki to explain all aspects of the project
 - [ ] add example page to wiki (mv, rm, rm -r, rm all but specified files...)
+- [ ] merge wiki `usage` and `options` pages together
+- [ ] check all the wiki links
 - [ ] test code. get at least 80% code coverage.
 - [ ] do one-line commit in `package.json` of the `"version"` line, complete with version number
 - [ ] add `--platform` and `-p` option to choose to publish on NPM or on GitHub
