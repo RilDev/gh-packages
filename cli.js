@@ -29,6 +29,10 @@ if (!shell.test("-d", ".git")) {
   shell.exit(1);
 }
 
+// npm
+// test if `npm init` has been run (look for package.json)
+
+
 // INITIALIZATION
 // init argv: argv is going to store all the user's input
 // the following block creates argv and initializes the `--help` flag

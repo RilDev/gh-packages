@@ -117,6 +117,8 @@ Thanks to the people working on the [yargs](https://github.com/yargs/yargs) proj
 
 ## Todo
 
+- [ ] check if `npm` is installed
+- [ ] check if `npm init` was run in the directory
 - [ ] create a wiki to explain all aspects of the project
 - [ ] add example page to wiki (mv, rm, rm -r, rm all but specified files...)
 - [ ] merge wiki `usage` and `options` pages together
