@@ -117,6 +117,7 @@ Thanks to the people working on the [yargs](https://github.com/yargs/yargs) proj
 
 ## Todo
 
+- [ ] add gif to show project's workflow
 - [ ] check if `npm` is installed
 - [ ] check if `npm init` was run in the directory
 - [ ] create a wiki to explain all aspects of the project
