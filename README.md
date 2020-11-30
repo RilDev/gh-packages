@@ -1,5 +1,7 @@
 # gh-packages
 
+![GitHub last commit](https://img.shields.io/github/last-commit/rildev/gh-packages?style=flat-square)
+
 _Like `gh-pages` but for packages!_
 
 Publish your packages to NPM with one command: `gh-packages`
