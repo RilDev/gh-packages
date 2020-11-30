@@ -29,7 +29,7 @@ You can execute a custom command before publishing your package by using the `-c
 ## Installation
 
 ```
-npm i gh-packages -D
+npm i -g gh-packages
 ```
 
 ## Usage
