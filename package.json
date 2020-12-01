@@ -1,6 +1,6 @@
 {
   "name": "gh-packages",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Like gh-pages but for packages!",
   "main": "index.js",
   "scripts": {
@@ -29,6 +29,6 @@
     "yargs": "^16.0.3"
   },
   "bin": {
-    "gh-packages": "./cli.js"
+    "gh-packages": "cli.js"
   }
 }
