@@ -34,6 +34,8 @@ You can execute a custom command before publishing your package by using the `-c
 npm i -g gh-packages
 ```
 
+_Note: It is also possible to use [npx](https://www.freecodecamp.org/news/npm-vs-npx-whats-the-difference/) to install `gh-packages`. For more information: [install with npx]_
+
 ## Usage
 
 To publish your package to NPM simply run `gh-packages` inside your package's directory:
