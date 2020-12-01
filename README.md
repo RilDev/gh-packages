@@ -34,7 +34,7 @@ You can execute a custom command before publishing your package by using the `-c
 npm i -g gh-packages
 ```
 
-_Note: It is also possible to use [npx](https://www.freecodecamp.org/news/npm-vs-npx-whats-the-difference/) to install `gh-packages`. For more information: [install with npx]_
+_Note: It is also possible to use [npx](https://www.freecodecamp.org/news/npm-vs-npx-whats-the-difference/) to install `gh-packages`. For more information: [install with npx](https://github.com/RilDev/gh-packages/wiki/3.-Installation#run-gh-packages-with-npx)_
 
 ## Usage
 
@@ -47,6 +47,8 @@ gh-packages
 
 _Note: If you don't have an NPM account yet, you can create one here: [create NPM account](https://www.npmjs.com/signup)_
 
+_Note 2: Make sure you run `npm login`, `npm init` and `git init` in `your-package`'s directory. For more information, please read the documentation: [Getting Started](https://github.com/RilDev/gh-packages/wiki/1.-Getting-Started)_
+
 ## Options
 
 ```
@@ -54,8 +56,6 @@ gh-packages [patch|minor|major] [-c|--command]
 ```
 
 ### Version Number Update:
-
-
 
 __Patch Update (0.0.X):__ `gh-packages` or `gh-packages patch`
 
@@ -124,8 +124,12 @@ Thanks to the people working on the [yargs](https://github.com/yargs/yargs) proj
 ## Todo
 
 - [x] add gif to show project's workflow
-- [ ] check if `npm` is installed
-- [ ] check if `npm init` was run in the directory
+- [x] check if `npm` is installed
+- [x] check if `npm init` was run in the directory
+- [ ] allow the use of `gh-packages --help` even if not in a `git` directory
+- [ ] add a link to [https://www.npmjs.com/package/gh-packages](https://www.npmjs.com/package/gh-packages) in the `--help` menu
+- [ ] add hyper-links to documentation in error messages with [terminal-link](https://github.com/sindresorhus/terminal-link)
+- [ ] add `terminal-link` in the Thanks section
 - [ ] create a wiki to explain all aspects of the project
 - [ ] add example page to wiki (mv, rm, rm -r, rm all but specified files...)
 - [ ] merge wiki `usage` and `options` pages together
@@ -137,5 +141,5 @@ Thanks to the people working on the [yargs](https://github.com/yargs/yargs) proj
 - [ ] name branches differently in case user wants to upload his package on multiple platforms. ex: gh-packages-npm, gh-packages-pypi...
 - [ ] check how does NPM parse/updates files
 - [ ] convert project to TypeScript
-- [ ] add Rollup bundeler
-- [ ] run `gh-packages` to reduce bundel size
+- [ ] add Rollup bundler
+- [ ] run `gh-packages` to reduce bundle size

@@ -16,22 +16,29 @@ const shell = require("shelljs");
 const yargs = require("yargs");
 
 // ENVIRONEMENT CHECKS
-// test for missing dependencies
-// git
-if (!shell.which("git")) {
-  shell.echo("Sorry, this script requires git");
-  shell.exit(1);
-}
+// if the user didn't run the `--help` flag
+  // test for missing dependencies
+  // git
+  if (!shell.which("git")) {
+    shell.echo("Sorry, this script requires git");
+    shell.exit(1);
+  }
+  // test if `git init` has been run
+  if (!shell.test("-d", ".git")) {
+    shell.echo("Please first run the command `git init` in this directory");
+    shell.exit(1);
+  }
 
-// test if `git init` has been run
-if (!shell.test("-d", ".git")) {
-  shell.echo("Please first run the command `git init` in this directory");
-  shell.exit(1);
-}
-
-// npm
-// test if `npm init` has been run (look for package.json)
-
+  // npm
+  if (!shell.which("npm")) {
+    shell.echo("Sorry, this script requires npm");
+    shell.exit(1);
+  }
+  // test if `npm init` has been run (look for package.json)
+  if (!shell.test("-f", "package.json")) {
+    shell.echo("Please first run the command `npm init` in this directory");
+    shell.exit(1);
+  }
 
 // INITIALIZATION
 // init argv: argv is going to store all the user's input
