@@ -109,7 +109,7 @@ _Note: You can also change the `${VERSION-patch}` to `${VERSION-minor}` to chang
 For more information and advanced examples, please visit the [documentation page](https://github.com/RilDev/gh-packages/wiki).
 ## Feature Request & Improvement
 
-Would you like a new feature? [Open an issue here!](https://github.com/RilDev/gh-packages/issues)
+Found a bug? Would you like a new feature? [Open an issue here!](https://github.com/RilDev/gh-packages/issues)
 
 Found a typo or would like to improve the docs? [Open a PR here!](https://github.com/RilDev/gh-packages/pulls)
 
