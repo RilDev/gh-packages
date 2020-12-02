@@ -6,39 +6,15 @@
  *  For the code to eternal life, please visit: https://codeforfaith.com
  *
  *  IMPORTS: import dependencies and modules
+ *  INITIALIZATION: initialize variables
  *  ENVIRONEMENT CHECKS: check if the project can run Gh-Packages successfully
- *  INITIALIZATION: initialize variables, get the user's arguments
+ *  GET USER INPUT: get the user's arguments
  *  EXECUTION: publish the package
  * */
 
 // IMPORTS
-const shell = require("shelljs");
-const yargs = require("yargs");
-
-// ENVIRONEMENT CHECKS
-// if the user didn't run the `--help` flag
-  // test for missing dependencies
-  // git
-  if (!shell.which("git")) {
-    shell.echo("Sorry, this script requires git");
-    shell.exit(1);
-  }
-  // test if `git init` has been run
-  if (!shell.test("-d", ".git")) {
-    shell.echo("Please first run the command `git init` in this directory");
-    shell.exit(1);
-  }
-
-  // npm
-  if (!shell.which("npm")) {
-    shell.echo("Sorry, this script requires npm");
-    shell.exit(1);
-  }
-  // test if `npm init` has been run (look for package.json)
-  if (!shell.test("-f", "package.json")) {
-    shell.echo("Please first run the command `npm init` in this directory");
-    shell.exit(1);
-  }
+const shell = require("shelljs"); // allows to run shell commands with Javascript
+const yargs = require("yargs"); // cli helper
 
 // INITIALIZATION
 // init argv: argv is going to store all the user's input
@@ -64,8 +40,34 @@ const argv = yargs
     "This will publish your package with a miror bump and print out 'custom command' in the terminal"
   ).argv;
 
-// get user's arguments
-// update: patch, minor or major
+// ENVIRONEMENT CHECKS
+// if the user didn't run the `--help` flag, test for missing dependencies
+if (!argv.help) {
+  // git
+  if (!shell.which("git")) {
+    shell.echo("Sorry, this script requires git");
+    shell.exit(1);
+  }
+  // test if `git init` has been run
+  if (!shell.test("-d", ".git")) {
+    shell.echo("Please first run the command `git init` in this directory");
+    shell.exit(1);
+  }
+
+  // npm
+  if (!shell.which("npm")) {
+    shell.echo("Sorry, this script requires npm");
+    shell.exit(1);
+  }
+  // test if `npm init` has been run (look for package.json)
+  if (!shell.test("-f", "package.json")) {
+    shell.echo("Please first run the command `npm init` in this directory");
+    shell.exit(1);
+  }
+}
+
+// GET USER INPUT
+// Update: patch, minor or major
 const validUpdateTypes = ["patch", "minor", "major"];
 // if no argument given by user, default to 'patch'
 let updateType = argv._[0] || validUpdateTypes[0];
@@ -79,7 +81,7 @@ if (!validUpdateTypes.includes(updateType)) {
   shell.exit(1);
 }
 
-// command: what will be executed on the new branch, before package publication
+// Command: what will be executed on the new branch, before package publication
 // if -c or --command flags are used, put them in the `userCommand` variable
 let userCommand = null;
 
