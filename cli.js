@@ -17,11 +17,22 @@ const shell = require("shelljs"); // allows to run shell commands with Javascrip
 const yargs = require("yargs"); // cli helper
 
 // INITIALIZATION
+// init linkTo: object containing all the clickable links
+const linkTo = {
+  npmPackagePage:
+    "For more information: https://www.npmjs.com/package/gh-packages (Ctrl+click to open in browser)",
+  wikiGettingStarted:
+    "For more information: https://github.com/RilDev/gh-packages/wiki/1.-Getting-Started (Ctrl+click to open in browser)",
+};
+
 // init argv: argv is going to store all the user's input
 // the following block creates argv and initializes the `--help` flag
 // input that isn't using an option will be stored in argv._ as an array
 const argv = yargs
-  .usage("gh-packages [patch|minor|major] [-c|--command]")
+  .usage(
+    `gh-packages helps you to publish optimized packages in one command. ${linkTo.npmPackagePage}\n`
+  )
+  .usage("Usage: gh-packages [patch|minor|major] [-c|--command]")
   .options({
     c: {
       type: "string",
@@ -45,23 +56,27 @@ const argv = yargs
 if (!argv.help) {
   // git
   if (!shell.which("git")) {
-    shell.echo("Sorry, this script requires git");
+    shell.echo(`Sorry, this script requires git. ${linkTo.wikiGettingStarted}`);
     shell.exit(1);
   }
   // test if `git init` has been run
   if (!shell.test("-d", ".git")) {
-    shell.echo("Please first run the command `git init` in this directory");
+    shell.echo(
+      `Please first run the command \`git init\` in this directory. ${linkTo.wikiGettingStarted}`
+    );
     shell.exit(1);
   }
 
   // npm
   if (!shell.which("npm")) {
-    shell.echo("Sorry, this script requires npm");
+    shell.echo(`Sorry, this script requires npm. ${linkTo.wikiGettingStarted}`);
     shell.exit(1);
   }
   // test if `npm init` has been run (look for package.json)
   if (!shell.test("-f", "package.json")) {
-    shell.echo("Please first run the command `npm init` in this directory");
+    shell.echo(
+      `Please first run the command \`npm init\` in this directory. ${linkTo.wikiGettingStarted}`
+    );
     shell.exit(1);
   }
 }

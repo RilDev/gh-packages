@@ -127,9 +127,8 @@ Thanks to the people working on the [yargs](https://github.com/yargs/yargs) proj
 - [x] check if `npm` is installed
 - [x] check if `npm init` was run in the directory
 - [x] allow the use of `gh-packages --help` even if not in a `git` directory
-- [ ] add a link to [https://www.npmjs.com/package/gh-packages](https://www.npmjs.com/package/gh-packages) in the `--help` menu
-- [ ] add hyper-links to documentation in error messages with [terminal-link](https://github.com/sindresorhus/terminal-link)
-- [ ] add `terminal-link` in the Thanks section
+- [x] add a link to [https://www.npmjs.com/package/gh-packages](https://www.npmjs.com/package/gh-packages) in the `--help` menu
+- [x] add hyper-links to documentation in error messages
 - [ ] create a wiki to explain all aspects of the project
 - [ ] add example page to wiki (mv, rm, rm -r, rm all but specified files...)
 - [ ] merge wiki `usage` and `options` pages together
