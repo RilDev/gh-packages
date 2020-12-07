@@ -117,6 +117,8 @@ Found a typo or would like to improve the docs? [Open a PR here!](https://github
 
 Thanks to [Rubens Mariuzzo](https://medium.com/@rmariuzzo) for his [Guide to creating a NodeJS command-line package](https://medium.com/netscape/a-guide-to-create-a-nodejs-command-line-package-c2166ad0452e).
 
+Thanks to [Dominik Kundel](https://dkundel.com/) for his [Three Things You Didn't Know You Could Do with npm Scripts](https://www.twilio.com/blog/npm-scripts) blog post.
+
 Thanks to [Nate Fischer](https://github.com/nfischer) for his [ShellJS](https://github.com/shelljs/shelljs) package.
 
 Thanks to the people working on the [yargs](https://github.com/yargs/yargs) project.
