@@ -4,7 +4,7 @@
 
 _Like `gh-pages` but for packages!_
 
-Publish your packages to NPM with one command: `gh-packages`
+Publish your optimized packages to NPM with one command: `gh-packages`
 
 ![gh-packages: How It Works](gh-packages-how-it-works.gif)
 
