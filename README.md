@@ -145,3 +145,4 @@ Thanks to the people working on the [yargs](https://github.com/yargs/yargs) proj
 - [ ] convert project to TypeScript
 - [ ] add Rollup bundler
 - [ ] run `gh-packages` to reduce bundle size
+- [ ] add an interactive message to the user before publishing the package "Are you sure you want to publish [package-name] vesion [new-package-version]? Y/n" with a `-y` or `--yes` flag to force the publcation without any messages
