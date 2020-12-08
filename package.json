@@ -31,5 +31,8 @@
   "bin": {
     "gh-packages": "cli.js"
   },
+  "scripts": {
+    "gh-packages": "cli.js"
+  },
   "preferGlobal": true
 }
