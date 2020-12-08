@@ -1,10 +1,10 @@
 {
   "name": "gh-packages",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Like gh-pages but for packages!",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "gh-packages": "cli.js"
   },
   "repository": {
     "type": "git",
@@ -29,9 +29,6 @@
     "yargs": "^16.0.3"
   },
   "bin": {
-    "gh-packages": "cli.js"
-  },
-  "scripts": {
     "gh-packages": "cli.js"
   },
   "preferGlobal": true
