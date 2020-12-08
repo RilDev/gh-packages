@@ -131,6 +131,7 @@ Thanks to the people working on the [yargs](https://github.com/yargs/yargs) proj
 - [x] allow the use of `gh-packages --help` even if not in a `git` directory
 - [x] add a link to [https://www.npmjs.com/package/gh-packages](https://www.npmjs.com/package/gh-packages) in the `--help` menu
 - [x] add hyper-links to documentation in error messages
+- [ ] remake the install section of the `README.md` by incorporating the information from [Locally Installed NPM Executables](https://2ality.com/2016/01/locally-installed-npm-executables.html)
 - [ ] create a wiki to explain all aspects of the project
 - [ ] add example page to wiki (mv, rm, rm -r, rm all but specified files...)
 - [ ] merge wiki `usage` and `options` pages together
