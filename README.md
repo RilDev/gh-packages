@@ -34,7 +34,7 @@ You can execute a custom command before publishing your package by using the `-c
 npm i -g gh-packages
 ```
 
-_Note: It is also possible to use [npx](https://www.freecodecamp.org/news/npm-vs-npx-whats-the-difference/) to install `gh-packages`. For more information: [install with npx](https://github.com/RilDev/gh-packages/wiki/3.-Installation#run-gh-packages-with-npx)_
+_Note: It is also possible install `gh-packages` locally or to use it with [npx](https://www.freecodecamp.org/news/npm-vs-npx-whats-the-difference/). For more information: [how to install gh-packages?](https://github.com/RilDev/gh-packages/wiki/3.-Installation)_
 
 ## Usage
 
