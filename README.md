@@ -121,6 +121,8 @@ Thanks to [Dominik Kundel](https://dkundel.com/) for his [Three Things You Didn'
 
 Thanks to [Nate Fischer](https://github.com/nfischer) for his [ShellJS](https://github.com/shelljs/shelljs) package.
 
+Thanks to [Wei Feng](https://github.com/windix) for his [Host and Publish NPM Packages on GitHub](https://medium.com/@windix/host-and-publish-npm-package-on-github-bb419a2acfd3) article.
+
 Thanks to the people working on the [yargs](https://github.com/yargs/yargs) project.
 
 ## Todo
