@@ -127,7 +127,6 @@ Thanks to the people working on the [yargs](https://github.com/yargs/yargs) proj
 
 ## Todo
 
-- [x] include things learned @ https://github.com/npm/feedback/discussions/112#discussioncomment-164829 in the install section of the documentation
 - [ ] create a wiki to explain all aspects of the project
 - [ ] add example page to wiki (mv, rm, rm -r, rm all but specified files...)
 - [ ] merge wiki `usage` and `options` pages together
