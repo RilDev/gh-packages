@@ -142,4 +142,4 @@ Thanks to the people working on the [yargs](https://github.com/yargs/yargs) proj
 - [ ] run `gh-packages` to reduce bundle size
 - [ ] add an interactive message to the user before publishing the package "Are you sure you want to publish [package-name] vesion [new-package-version]? Y/n" with a `-y` or `--yes` flag to force the publcation without any messages
 - [x] remove the `preferGlobal` flag in `package.json` https://github.com/npm/feedback/discussions/112#discussioncomment-162264
-- [ ] add `package` script in `package.json` to push with latest `cli.js`
+- [x] add `package` script in `package.json` to push with latest `cli.js`
